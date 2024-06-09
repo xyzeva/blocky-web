@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Blockify Extension",
+  "version": "1.0",
+  "description": "bring back the boxiness of the old web for *any* website",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

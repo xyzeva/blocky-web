@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blocky Web</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Blocky Web</h2>
+        <div class="toggle-container">
+          <span>Enable</span>
+          <label class="toggle">
+            <input type="checkbox" id="blockifyToggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="excluded-sites">
+        <h3>Excluded Websites</h3>
+        <form class="exclude-form" id="excludeForm">
+          <input
+            type="text"
+            id="excludedSites"
+            placeholder="e.g., example.com"
+          />
+          <button type="submit">Add</button>
+        </form>
+        <ul id="excludedSitesList" class="excluded-list"></ul>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
